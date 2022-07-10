@@ -1,6 +1,7 @@
 /* Start Variables */
-
-
+:root {
+    --main-color: #10cab7;
+}
 /* End Variables */
 
 /* Start Global Rules  */   
@@ -91,6 +92,7 @@ body {
     min-width: 200px;
     top: calc(100% + 20px);
     display: none;
+    z-index: 1;
 }
 .header .links:hover ul {
     display: block;
@@ -121,3 +123,62 @@ body {
     border-bottom: 1px solid #ddd;
 }
 /* End Header */
+/* Start Landing Section */
+.landing {
+    background-image: url(../images/back.png);
+    height: calc(100vh - 64px);
+    background-size: cover;
+    position: relative;
+}
+
+.landing .intro-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    width: 320px;
+    max-width: 100%;
+}
+
+.landing .intro-text h1 {
+    margin: 0;
+    color: var(--main-color);
+    font-size: 50px;
+    font-weight: bold;
+}
+.landing .intro-text p {
+    font-size: 20px;
+    line-height: 1.8;
+}
+/* End Landing Section */
+/* Start Features  */
+.features {
+    padding-top: 60px;
+    padding-bottom: 60px;
+    background-color: #f6f6f6;
+}
+.features .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)) ;
+    grid-gap: 20px;
+}
+.features .feat {
+    padding: 10px;
+    text-align: center;
+}
+.features .feat i {
+    color: var(--main-color);
+}
+
+.features .feat  h3 {
+    font-weight: 800;
+    margin: 30px 0 ;
+}
+
+.features .feat p {
+    line-height: 1.8;
+    color: #777;
+    font-size: 15px;
+}
+/* End Features  */
